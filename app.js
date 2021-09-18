@@ -6,42 +6,14 @@
   let stop_btn = document.querySelector(".stop-btn");
   let reset_btn= document.querySelector(".reset-btn");
 
- let Timee = function(){
-  this.jsMilisec =0;
-  this.jsHr = 0;
-  this.jsSec = 0;
-  this.jsMin = 0;
-    var init = ()=> {this.jsMilisec += 10;};
-  this.counter1 = () => {
-    init();
-    if(this.jsMilisec > 999){
-      this.jsMilisec = 0;
-      this.jsSec++;
-      if(this.jsSec > 59){
-        this.jsSec = 0;
-         this.jsMin++;
-       if(this.jsMin > 59){
-         this.jsMin = 0;
-           this.jsHr++;
-       }
-      }
-    }
-     hr.innerHTML = this.jsHr < 10 ? "0" + this.jsHr : this.jsHr;
-     min.innerHTML = this.jsMin < 10 ? "0" + this.jsMin : this.jsMin;
-     sec.innerHTML = this.jsSec < 10 ? "0" + this.jsSec : this.jsSec;
-     milisec.innerHTML= this.jsMilisec < 10 ? "00" + this.jsMilisec : this.jsMilisec < 100 ? "0" + this.jsMilisec : this.jsMilisec;
-  }
-    this.reset = () => {
-     this.jsHr = 0;
-      this.jsSec = 0;
-      this.jsMin = 0;
-      this.jsMilisec =0;
-      hr.innerHTML = "0" + this.jsHr;
-      min.innerHTML = "0" +this.jsMin;
-      sec.innerHTML = "0" + 0;
-      milisec.innerHTmL = "0" + 0;
-  };
-};
+let [h, m, s, ms] = [0,0,0,0];
+
+let counto = () => {
+  ms += 10;
+  
+}
+
+
 
 let timee = new Timee();
 var timer;
