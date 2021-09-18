@@ -8,36 +8,50 @@
 
 let [h, m, s, ms] = [0,0,0,0];
 
+let timer;
+star_btn.addEventListener('click', (e) => {
+  timer = window.setInterval(counto, 10);
+});
+
 let counto = () => {
   ms += 10;
-  
+  if (ms > 999) {
+    ms = 0;
+    s++;
+    if (s > 59) {
+      s = 0;
+      m++;
+      if (m > 59) {
+        m = 0;
+        h++;
+      }
+    }
+  }
+  hour = h < 10 ? "0" + h : h;
+  minu = m < 10 ? "0" + m : m;
+  se= s < 10 ? "0" + s : s;
+  mil = ms < 10 ? "00" + ms : ms < 100 ? "0" + ms : ms;
+  hr.innerHTML = `${hour}`, minu.innerHTmL = `${minu}`, sec.innerHTML = se,  milisec.innerHTML = `${mil}`;
 }
 
-
-
-let timee = new Timee();
-var timer;
-star_btn.addEventListener('click', () => {
-  timer = window.setInterval(timee.counter1, 10);
-});
 
 stop_btn.addEventListener('click', (e) => {
   clearInterval(timer);
 });
 
 
-let reseting = () =>{
+let reseting = (e) => {
   clearInterval(timer);
-  timee.reset()
+  reset()
 };
 reset_btn.addEventListener('click', reseting);
 
-console.log(timee.counter1());
-//   let y = 1;
-// let a = () => {
-//   y++;
-//   console.log(y);
-// }
-  
-// window.setInterval(a
-// , 10)
+
+let reset = () => {
+  let [h, m, s, ms] = [0,0,0,0];
+    hr.innerHTML = "0" + h;
+    min.innerHTML = "0" + m;
+    sec.innerHTML = "0" + s;
+    milisec.innerHTmL = "0" + ms;
+  };
+
