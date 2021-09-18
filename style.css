@@ -1,0 +1,103 @@
+@font-face{
+ font-family:'digital-clock-font';
+ src: url('put_the_location_to_your_font.ttf or .otf');
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+html{
+  font-size:100%;
+}
+body{
+  font-family: Segoe UI, 'Orbitron', sans-serif ;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 16px;
+  padding-left: 16px;
+  max-width:100%;
+  height: 100vh;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  background-color:rgb(240,241,235);
+}
+.container{
+  font-family: Segoe UI, 'Orbitron', sans-serif;
+  font-size: 3rem;
+  background-color:rgb(253,254,254);
+  width : 350px;
+  height: 100px;
+  justify-content: space-around;
+  padding: 10px 10px 10px 10px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.29);
+}
+.timedisplay{
+  box-shadow: 0 4px 10px 10px rgba(0,0,0,0.3)  ;
+  font-family: Segoe UI, 'Orbitron', sans-serif;
+  border-radius: 20px;
+  padding: 5px;
+  width : 300px ;
+  height: 80px;
+  background-color: #000;
+  color :#ff0000;
+  align-items: center;
+}
+/* .sm-counter{
+  font-size:0.21em;
+  position: absolute;
+  justify-content: ;
+  float: left;
+  right : -2px;
+} */
+.time-holder{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.controller{
+  font-family: Segoe UI, sans-serif ;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  font-size: 0.2em;
+  justify-content: space-around;
+}
+
+.counter{
+  display:relative;
+  font-family: Segoe UI , sans-serif;
+  font-weight: 600;
+  margin: 5px 0px 10px;
+  font-size: 0.7em ;
+  justify-content: space-around;
+  letter-spacing: 1px;
+  align-items: center;
+  /* width : 350px; */
+  
+}
+.id{
+  font-size: 0.3em ;
+}
+.timers{
+  align-content: center;
+  display: grid;
+  grid-template-rows: 50% 50%;
+}
+ .milisec{
+  width: 8rem;
+  padding: 0 0px 0px 0px;
+}
+.btn{
+  background-color: #f1f1f1;
+  padding: 5px 20px;
+  border:1px solid #ff0700;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.btn:hover {
+  background-color: #;
+}
