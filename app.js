@@ -27,10 +27,10 @@
       this.jsSec++;
       if(this.jsSec > 59){
         this.jsSec = 0;
-         this.jsMin++;
+        this.jsMin++;
        if(this.jsMin > 59){
          this.jsMin = 0;
-           this.jsHr++;
+         this.jsHr++;
        }
       }
     }
@@ -38,7 +38,7 @@
      min.innerHTML = this.jsMin < 10 ? "0" + this.jsMin : this.jsMin;
      sec.innerHTML = this.jsSec < 10 ? "0" + this.jsSec : this.jsSec;
      milisec.innerHTML= this.jsMilisec < 10 ? "00" + this.jsMilisec : this.jsMilisec < 100 ? "0" + this.jsMilisec : this.jsMilisec;
-  }
+  };
     // definition of reset method
     this.reset = () => {
      this.jsHr = 0;
