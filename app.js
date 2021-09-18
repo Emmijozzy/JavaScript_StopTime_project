@@ -39,19 +39,11 @@ stop_btn.addEventListener('click', (e) => {
   clearInterval(timer);
 });
 
-
-let reseting = (e) => {
-  clearInterval(timer);
-  reset()
-};
-reset_btn.addEventListener('click', reseting);
-
-
-let reset = () => {
-  let [h, m, s, ms] = [0,0,0,0];
+reset_btn.addEventListener('click', () => {
+    clearInterval(timer)
+    let [h, m, s, ms] = [0, 0, 0, 0];
     hr.innerHTML = "0" + h;
     min.innerHTML = "0" + m;
     sec.innerHTML = "0" + s;
-    milisec.innerHTmL = "0" + ms;
-  };
-
+    milisec.innerHTmL = `${000}`;
+});
